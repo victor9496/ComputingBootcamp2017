@@ -38,6 +38,12 @@ Visualize the relationship between GDP and life expectancy for
 countries in Europe in 1952 using a scatter plot.
 
 ```{r eu_52}
+eu_5267 <- gap %>%
+  filter(continent == "Europe", year %in% c(1952, 1967))
+ggplot(data = eu_5267, aes(x = gdpPercap, y = lifeExp, color = factor(year))) +
+  geom_point() 
+
+1=2
 ```
 
 ### Exercise 3
